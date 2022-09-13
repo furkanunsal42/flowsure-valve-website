@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="timeline.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/392df428d9.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <body>
+    <div class="upper-bar">
+
+      <div class="dropdown change-language">
+        <button class="dropbtn">Change Language ⮟</button>
+        <div class="dropdown-content">
+          <a href="main_turkish.html" class="blue-top">TURKISH</a>
+          <a href="main_english.html">ENGLISH</a>
+          <a href="#">RUSSIAN</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="navbar-container">
+      <div class="navbar">
+        <div class="logo-container">
+          <a href="main_turkish.html"><img id="logo" src="flowsure.png" alt=""></a>
+        </div>
+        <div class="buttons-container">
+
+          <a href="contact_turkish.html" class="navbar-button">İLETİŞİM</a>
+          <a href="clients_turkish.html" class="navbar-button">REFERANSLAR</a>
+          <div class="dropdown navbar-button">
+            <button class="dropbtn">HABERLER ⮟</button>
+            <div class="dropdown-content">
+              <a href="#" class="blue-top">FUARLAR</a>
+              <a href="#">ŞİRKET ETKİNLİKLERİ</a>
+              <a href="#">BAYİ ETKİNLİKLERİ</a>
+            </div>
+          </div>
+
+          <a href="products_turkish.html" class="navbar-button">ÜRÜNLER</a>
+
+
+          <div class="dropdown navbar-button">
+            <button class="dropbtn">KALİTE ⮟</button>
+            <div class="dropdown-content">
+              <a href="quality_system_turkish.html" class="blue-top">KALİTE SİSTEMİ</a>
+              <a href="certificates_turkish.html">SERTİFİKALAR</a>
+              <a href="policies_turkish.html">POLİTİKALAR</a>
+            </div>
+          </div>
+
+          <div class="dropdown navbar-button">
+            <button class="dropbtn">KURUMSAL ⮟</button>
+            <div class="dropdown-content">
+              <a href="about_us_turkish.html" class="blue-top">HAKKIMIZDA</a>
+              <a href="our_values_turkish.html">DEĞERLERİMİZ</a>
+              <a href="timeline_turkish.html">TARİHÇE</a>
+            </div>
+          </div>
+
+          <a href="main_turkish.html" class="navbar-button blue-text">ANA SAYFA</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="https://www.fafvana.com.tr/en/wp-content/uploads/2021/05/timeline_en-001-scaled.jpg" alt="">
+
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+  </body>
+
+</html>
