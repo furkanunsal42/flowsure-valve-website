@@ -17,6 +17,16 @@ body {
     overflow: visible;
 }
 
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .change-language {
     font-size: 14px;
     background-color: #17479e;
@@ -378,8 +388,6 @@ body {
     display: block;
 }
 
-
-
 .blue-text {
     color: #17479e;
 }
@@ -409,18 +417,29 @@ body {
 }
 
 .container {
-    width: 70%;
-    margin: 0px 20%;
+    width: 80%;
+    margin: 0px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .right-list {
-    float: left;
-    width: 30%;
+    min-width: 370px;
+    margin-top: 30px;
+}
+
+.left-container {
+    width: 60%;
+    min-width: 360px;
+    margin-top: 30px;
 }
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-    width: 370px;
+    width: 100%;
+    min-width: 370px;
+    max-width: 420px;
     height: 45px;
     color: #333;
     cursor: pointer;
@@ -482,12 +501,6 @@ body {
     color: #17479e;
 }
 
-.left-container {
-    background-color: #f7f8f8;
-    width: 70%;
-    float: right;
-}
-
 .header {
     color: #555;
     font-family: "Roboto Condensed", sans-serif;
@@ -498,20 +511,35 @@ body {
 
 .image-sheet-container {
     width: 100%;
-    height: 500px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+    justify-content: center;
 }
 
 .catalog-image {
     width: 50%;
-    float: left;
+    min-width: 180px;
     height: auto;
 }
 
-.catalog-container {
-    margin-right: 3%;
-    width: 47%;
-    height: 400px;
-    float: right;
+@media screen and (min-width: 1350px) {
+    .catalog-container {
+        min-width: 300px;
+        margin-right: 3%;
+        width: 47%;
+        height: 400px;
+    }
+}
+
+
+@media screen and (max-width: 1350px) {
+    .catalog-container {
+        margin-right: 3%;
+        width: 100%;
+        height: 400px;
+    }
 }
 
 .catalog-header {
@@ -531,6 +559,7 @@ body {
     font-weight: 600;
     padding: 10px;
     padding-bottom: 0px;
+    
 }
 
 .catalog-spec {
@@ -544,7 +573,7 @@ body {
 }
 
 .catalog-spec-info {
-    position: absolute;
+    float: right;
     left: 200px;
     top: 10px;
     font-weight: 400;
