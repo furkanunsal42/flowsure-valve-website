@@ -838,3 +838,7 @@ a {
     width: 100%;
     height: auto;
 }
+
+.footer-vertical-container a{
+    text-decoration: none;
+}

@@ -577,6 +577,10 @@ body {
     margin-left: 50px;
 }
 
+.footer-vertical-container a{
+    text-decoration: none;
+}
+
 .footer-text-header {
     color: #14387b;
     font-size: 18px;
